@@ -137,6 +137,31 @@ width="50px";
   </style>
 </head>
 <body>
+  <h2 class="slide-text">
+  <span>Trade Smart,</span>
+  <span>Grow Fast,</span>
+  <span>Earn Confidently!</span>
+</h2>
+
+<style>
+.slide-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  height: 30px;
+}
+.slide-text span {
+  display: block;
+  animation: slide 6s infinite;
+}
+@keyframes slide {
+  0% {transform: translateY(0);}
+  33% {transform: translateY(-30px);}
+  66% {transform: translateY(-60px);}
+  100% {transform: translateY(0);}
+}
+</style>
   <div class="overlay"></div>
 
   <div class="card" role="main">
