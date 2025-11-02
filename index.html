@@ -134,6 +134,52 @@ border="2px solid ";
 height="2000px";
 width="50px";
 }
+    /* 🔹 Sliding Text Header CSS */
+.slide-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.slide-text {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4em;
+  height: 25px;
+  overflow: hidden;
+  display: inline-block;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
+}
+
+.slide-text span {
+  display: block;
+  animation: slide 7s infinite;
+}
+
+@keyframes slide {
+  0% {transform: translateY(0);}
+  25% {transform: translateY(-25px);}
+  50% {transform: translateY(-50px);}
+  75% {transform: translateY(-75px);}
+  100% {transform: translateY(0);}
+}
+
+/* 🔹 Mobile responsive tweak */
+@media (max-width: 600px) {
+  .slide-text {
+    font-size: 0.85rem;
+    height: 20px;
+  }
+  @keyframes slide {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(-20px);}
+    50% {transform: translateY(-40px);}
+    75% {transform: translateY(-60px);}
+    100% {transform: translateY(0);}
+  }
+}
   </style>
 </head>
 <body>
@@ -217,34 +263,6 @@ function togglePassword(id, toggleId) {
   display: inline-block;
   text-shadow: 0 0 5px rgba(255,255,255,0.6);
 }
-
-.slide-text span {
-  display: block;
-  animation: slide 7s infinite;
-}
-
-@keyframes slide {
-  0% {transform: translateY(0);}
-  25% {transform: translateY(-25px);}
-  50% {transform: translateY(-50px);}
-  75% {transform: translateY(-75px);}
-  100% {transform: translateY(0);}
-}
-
-/* 🔹 Mobile responsive tweak */
-@media (max-width: 600px) {
-  .slide-text {
-    font-size: 0.85rem;
-    height: 20px;
-  }
-  @keyframes slide {
-    0% {transform: translateY(0);}
-    25% {transform: translateY(-20px);}
-    50% {transform: translateY(-40px);}
-    75% {transform: translateY(-60px);}
-    100% {transform: translateY(0);}
-  }
-           }
 </script>
            <label><input type="checkbox" id="rememberMe"> Remember Me</label>
           <button id="loginBtn" class="btn primary">Login</button>
